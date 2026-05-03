@@ -1,4 +1,4 @@
-# 🚀 Ethara Task Management System
+# 🚀Task Management System
 
 Welcome to the **Ethara Task Management System** – a sleek, highly-responsive platform designed to bring clarity, efficiency, and beauty to team collaboration. Built with a modern tech stack, this application empowers administrators to effortlessly orchestrate projects while giving team members a delightful, frictionless experience for tracking their daily work.
 
