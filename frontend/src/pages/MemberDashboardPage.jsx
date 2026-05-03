@@ -81,7 +81,8 @@ function MemberDashboardPage() {
         ],
       });
     } catch (error) {
-      console.error("Failed to load member dashboard", error);
+      console.error("Dashboard error:", error.response?.data || error.message);
+      alert("Failed to load dashboard");
     } finally {
       setLoading(false);
     }
