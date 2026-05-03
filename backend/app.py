@@ -26,7 +26,7 @@ def create_app():
         raise RuntimeError("DATABASE_URL and SECRET_KEY must be set in the environment.")
 
     app.config["SESSION_COOKIE_HTTPONLY"] = True
-    app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
+    app.config["SESSION_COOKIE_SAMESITE"] = "None"
     app.config["SESSION_COOKIE_SECURE"] = True # Assume HTTPS on Railway
 
     CORS(app, supports_credentials=True, origins=[os.getenv("CORS_ORIGINS", "http://localhost:3000")])
