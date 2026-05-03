@@ -62,14 +62,14 @@ function LoginPage({ setUser }) {
           <div className="flex gap-3 mb-6">
             <button
               type="button"
-              onClick={() => setForm({ email: 'admin@demo.com', password: 'adminpassword' })}
+              onClick={() => setForm({ email: 'admin@test.com', password: 'admin123' })}
               className="flex-1 text-sm bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/50 px-4 py-2.5 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors font-semibold"
             >
               👑 Admin Demo
             </button>
             <button
               type="button"
-              onClick={() => setForm({ email: 'member@demo.com', password: 'memberpassword' })}
+              onClick={() => setForm({ email: 'member@test.com', password: 'member123' })}
               className="flex-1 text-sm bg-slate-50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 px-4 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-semibold"
             >
               👤 Member Demo
