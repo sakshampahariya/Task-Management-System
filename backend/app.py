@@ -29,8 +29,7 @@ def create_app():
     app.config["SESSION_COOKIE_SAMESITE"] = "Lax"
     app.config["SESSION_COOKIE_SECURE"] = True # Assume HTTPS on Railway
 
-    # Allow all origins for now, but you might want to lock this down
-    CORS(app, supports_credentials=True, origins=["*"])
+    CORS(app, supports_credentials=True, origins=[os.getenv("CORS_ORIGINS", "http://localhost:3000")])
 
     db.init_app(app)
     
