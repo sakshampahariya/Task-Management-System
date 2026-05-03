@@ -7,9 +7,14 @@ function Navbar({ user, setUser }) {
   const navigate = useNavigate();
 
   const handleLogout = async () => {
-    await api.post("/auth/logout");
-    setUser(null);
-    navigate("/login");
+    try {
+      await api.post("/auth/logout");
+      setUser(null);
+      navigate("/login");
+    } catch (error) {
+      console.error("Logout failed:", error);
+      alert("Logout failed: " + error.message);
+    }
   };
 
   return (
