@@ -1,0 +1,25 @@
+# Python Virtual Environment
+venv/
+env/
+
+# Node.js Dependencies
+node_modules/
+dist/
+
+# Environment Variables
+.env
+.env.*
+
+# Python Cache & Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+
+# SQLite Database
+instance/
+*.db
+*.sqlite3
+
+# IDEs and OS Files
+.vscode/
+.DS_Store
