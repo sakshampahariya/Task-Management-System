@@ -51,12 +51,29 @@ function LoginPage({ setUser }) {
         </div>
 
         <div className="w-full max-w-md">
-          <div className="text-center lg:text-left mb-10">
+          <div className="text-center lg:text-left mb-8">
             <div className="inline-flex lg:hidden h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 font-bold text-white mb-6 shadow-lg">
               <Command size={28} />
             </div>
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Welcome Back</h2>
             <p className="text-gray-500 dark:text-gray-400">Please enter your details to sign in.</p>
+          </div>
+
+          <div className="flex gap-3 mb-6">
+            <button
+              type="button"
+              onClick={() => setForm({ email: 'admin@demo.com', password: 'adminpassword' })}
+              className="flex-1 text-sm bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800/50 px-4 py-2.5 rounded-xl hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors font-semibold"
+            >
+              👑 Admin Demo
+            </button>
+            <button
+              type="button"
+              onClick={() => setForm({ email: 'member@demo.com', password: 'memberpassword' })}
+              className="flex-1 text-sm bg-slate-50 dark:bg-slate-800/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 px-4 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors font-semibold"
+            >
+              👤 Member Demo
+            </button>
           </div>
 
           <form onSubmit={onSubmit} className="space-y-6">
