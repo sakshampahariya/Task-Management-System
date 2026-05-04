@@ -32,7 +32,7 @@ def create_app():
     CORS(app, supports_credentials=True, origins=[os.getenv("CORS_ORIGINS", "http://localhost:3000")])
 
     db.init_app(app)
-    
+
     # It's better to use Flask-Migrate for database migrations
     # and a separate script for seeding in a production environment.
     with app.app_context():
@@ -100,7 +100,7 @@ def register():
     name = (data.get("name") or "").strip()
     email = (data.get("email") or "").strip().lower()
     password = data.get("password") or ""
-    role = data.get("role", "Member")
+    role = "Member"
 
     if not name or not email or not password:
         return jsonify({"error": "name, email and password are required"}), 400
